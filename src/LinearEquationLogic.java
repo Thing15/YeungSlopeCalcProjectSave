@@ -4,12 +4,11 @@ public class LinearEquationLogic {
 
     private Scanner scan;
 
-    private LinearEquation newEquation = getLinearEquationInfo();
     private int x1;
     private int x2;
     private int y1;
     private int y2;
-
+    private LinearEquation newEquation = new LinearEquation(x1, x2, y1, y2);
 
     public LinearEquationLogic() {
         scan = new Scanner(System.in);
@@ -33,10 +32,10 @@ public class LinearEquationLogic {
                 coord1 = scan.nextLine();
             }
         }
-/*
-       x1 = Integer.parseInt(coord1.substring(coord1.indexOf("("), coord1.indexOf(",")));
+
+       x1 = Integer.parseInt(coord1.substring(coord1.indexOf("(" + 1), coord1.indexOf(",")));
        y1 = Integer.parseInt(coord1.substring(coord1.indexOf(",") + 2, coord1.indexOf(")")));
-*/
+
         System.out.print("Enter coordinate 2: ");
         String coord2 = scan.nextLine();
         if (coord2.contains(".")) {
@@ -46,13 +45,9 @@ public class LinearEquationLogic {
                 coord2 = scan.nextLine();
             }
         }
-/*
-       x2 = Integer.parseInt(coord2.substring(coord2.indexOf("("), coord2.indexOf(",")));
+
+       x2 = Integer.parseInt(coord2.substring(coord2.indexOf("(" + 1), coord2.indexOf(",")));
        y2 = Integer.parseInt(coord2.substring(coord2.indexOf(",") + 2, coord2.indexOf(")")));
-
-
-*/
-        return
     }
 
 
