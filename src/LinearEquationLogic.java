@@ -8,16 +8,16 @@ public class LinearEquationLogic {
     private int x2;
     private int y1;
     private int y2;
-    private LinearEquation newEquation = new LinearEquation(x1, x2, y1, y2);
+    private LinearEquation newEquation;
 
     public LinearEquationLogic() {
         scan = new Scanner(System.in);
     }
 
-
     public void start() {
         System.out.println("Welcome to the linear equation calculator!");
         getLinearEquationInfo();
+        newEquation = new LinearEquation(x1, y1, x2, y2);
         System.out.println(newEquation.lineInfo());
         System.out.println(getXIntercept());
     }
@@ -33,7 +33,7 @@ public class LinearEquationLogic {
             }
         }
 
-       x1 = Integer.parseInt(coord1.substring(coord1.indexOf("(" + 1), coord1.indexOf(",")));
+       x1 = Integer.parseInt(coord1.substring(coord1.indexOf("(") + 1, coord1.indexOf(",")));
        y1 = Integer.parseInt(coord1.substring(coord1.indexOf(",") + 2, coord1.indexOf(")")));
 
         System.out.print("Enter coordinate 2: ");
@@ -46,10 +46,9 @@ public class LinearEquationLogic {
             }
         }
 
-       x2 = Integer.parseInt(coord2.substring(coord2.indexOf("(" + 1), coord2.indexOf(",")));
+       x2 = Integer.parseInt(coord2.substring(coord2.indexOf("(") + 1, coord2.indexOf(",")));
        y2 = Integer.parseInt(coord2.substring(coord2.indexOf(",") + 2, coord2.indexOf(")")));
     }
-
 
     private String getXIntercept() {
         System.out.print("Enter a value for x: ");
