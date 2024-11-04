@@ -21,7 +21,7 @@ public class LinearEquation {
     }
 
     public double slope() {
-        return (double) (y2 - y1) / (x2 - x1);
+        return roundedToHundredth((double) (y2 - y1) / (x2 - x1));
     }
 
     public String equation() {
@@ -56,7 +56,7 @@ public class LinearEquation {
     }
 
     public String coordinateForX(double x) {
-        return "(" + x + ", " + (slope() * x + yIntercept()) + ")";
+        return "(" + x + ", " + roundedToHundredth((slope() * x + yIntercept())) + ")";
     }
 
     public String lineInfo() {

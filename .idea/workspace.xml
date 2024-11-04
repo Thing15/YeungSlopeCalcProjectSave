@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62be82d3-360a-48b1-b75c-17f87757e5b4" name="Changes" comment="final update 11/3">
+    <list default="true" id="62be82d3-360a-48b1-b75c-17f87757e5b4" name="Changes" comment="actually final update 11/3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LinearEquation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinearEquation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +93,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730685277454</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="actually final update 11/3">
+      <option name="closed" value="true" />
+      <created>1730692154142</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1730692154142</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -111,6 +120,7 @@
     <MESSAGE value="update 11/1" />
     <MESSAGE value="update 11/3" />
     <MESSAGE value="final update 11/3" />
-    <option name="LAST_COMMIT_MESSAGE" value="final update 11/3" />
+    <MESSAGE value="actually final update 11/3" />
+    <option name="LAST_COMMIT_MESSAGE" value="actually final update 11/3" />
   </component>
 </project>
