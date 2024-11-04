@@ -15,11 +15,30 @@ public class LinearEquationLogic {
     }
 
     public void start() {
+        boolean repeat = true;
+
         System.out.println("Welcome to the linear equation calculator!");
-        getLinearEquationInfo();
-        newEquation = new LinearEquation(x1, y1, x2, y2);
-        System.out.println(newEquation.lineInfo());
-        System.out.println(getXIntercept());
+
+        while (repeat) {
+            getLinearEquationInfo();
+            System.out.println();
+            newEquation = new LinearEquation(x1, y1, x2, y2);
+            if (x1 == x2) {
+                System.out.println("These points are on a vertical line: x = " + x1);
+            } else {
+                System.out.println(newEquation.lineInfo());
+                System.out.println();
+                System.out.println(getXIntercept());
+            }
+
+            System.out.println();
+            System.out.print("Would you like to enter another pair of coordinates? y/n: ");
+            String choice = scan.nextLine().toLowerCase();
+            if (choice.equals("n")) {
+                repeat = false;
+                System.out.println("Thank you for using the slope calculator, goodbye!");
+            }
+        }
     }
 
     public void getLinearEquationInfo() {
@@ -53,6 +72,7 @@ public class LinearEquationLogic {
     private String getXIntercept() {
         System.out.print("Enter a value for x: ");
         double xValue = scan.nextDouble();
+        scan.nextLine();
 
         return "The point on the line is " + newEquation.coordinateForX(xValue);
     }

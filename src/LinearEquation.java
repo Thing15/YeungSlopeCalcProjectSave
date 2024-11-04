@@ -17,7 +17,7 @@ public class LinearEquation {
     }
 
     public double yIntercept() {
-        return y1 - (slope() * x1);
+        return roundedToHundredth(y1 - (slope() * x1));
     }
 
     public double slope() {
@@ -25,13 +25,34 @@ public class LinearEquation {
     }
 
     public String equation() {
-        String slope = (y2 - y1) + "/" + (x2 - x1);
+        int changeY = y2 - y1;
+        int changeX = x2 - x1;
 
-        if (y1 == y2) {
+        String slopeStr;
+        if (changeY == 0) {
             return "y = " + yIntercept();
+        } else if (slope() == 1) {
+            slopeStr = "";
+        } else if (slope() == -1) {
+            slopeStr = "-";
+        } else if (changeX == 1 || changeY % changeX == 0) {
+            slopeStr = "" + (changeY / changeX);
         } else {
-            return "y = " + slope + "x + " + yIntercept();
+            if ((changeY > 0 && changeX < 0) || (changeY < 0 && changeX > 0)) {
+                slopeStr = "-" + Math.abs(changeY) + "/" + Math.abs(changeX);
+            } else {
+                slopeStr = Math.abs(changeY) + "/" + Math.abs(changeX);
+            }
         }
+
+        String yInterceptStr = "";
+        if (yIntercept() > 0) {
+            yInterceptStr = " + " + yIntercept();
+        } else if (yIntercept() < 0) {
+            yInterceptStr = " - " + Math.abs(yIntercept());
+        }
+
+        return "y = " + slopeStr + "x" + yInterceptStr;
     }
 
     public String coordinateForX(double x) {
@@ -39,7 +60,7 @@ public class LinearEquation {
     }
 
     public String lineInfo() {
-        return "The two points are: (" + x1 + ", " + y1 + ") and (" + x2 + ", " + y2 + ")" + "\nThe equation of the line between these points is: " + equation() + "\nThe y-intercept of this line is: " + yIntercept() + "\nThe slope of this line is: " + slope() + "\nThe distance between these points is " + distance();
+        return "The two points are: (" + x1 + ", " + y1 + ") and (" + x2 + ", " + y2 + ")" + "\nThe equation of the line between these points is: " + equation() + "\nThe y-intercept of this line is: " + yIntercept() + "\nThe slope of this line is: " + slope() + "\nThe distance between these points is: " + distance();
     }
 
     private double roundedToHundredth(double toRound) {

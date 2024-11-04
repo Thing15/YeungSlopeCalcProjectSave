@@ -1,7 +1,8 @@
 public class LinearEquationRunner {
     public static void main(String[] args) {
-       // LinearEquationLogic equation = new LinearEquationLogic();
-       // equation.start();
+       //LinearEquationLogic equation = new LinearEquationLogic();
+       //equation.start();
+        /*
         System.out.println("-------------- TESTING: CORRECT METHOD NAMING & RETURN VALUES --------------");
         int x1 = -1;
         int y1 = 5;
@@ -22,7 +23,7 @@ public class LinearEquationRunner {
         LinearEquationLogic logic = new LinearEquationLogic();
         logic.start();
 
-
+*/
         System.out.println("-------------- TESTING: REQUIRED TEST CASES --------------");
         LinearEquation eq1 = new LinearEquation(-1, 5, 3, 10); // good for 5/4 slope
         LinearEquation eq2 = new LinearEquation(-6, -2, 1, -1); // good for 1/7 slope
@@ -69,6 +70,8 @@ public class LinearEquationRunner {
         System.out.println(eq18.equation());
         System.out.println(eq19.equation());
         System.out.println(eq21.equation());
+
+
 
     }
 }
