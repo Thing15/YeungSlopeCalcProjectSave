@@ -74,6 +74,7 @@ public class LinearEquationLogic {
         double xValue = scan.nextDouble();
         scan.nextLine();
 
+        System.out.println();
         return "The point on the line is " + newEquation.coordinateForX(xValue);
     }
 }
